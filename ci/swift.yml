@@ -10,6 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Build
+      run: sudo xcode-select -s /Applications/Xcode-beta.app/Contents/Developer
       run: swift build -v
     - name: Run tests
       run: swift test -v
